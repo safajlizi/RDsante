@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="667.0" maxWidth="937.0" prefHeight="658.0" prefWidth="937.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjava.personnelController">
+
+    <children>
+        <BorderPane layoutY="7.0" prefHeight="42.0" prefWidth="523.0">
+            <top>
+                <HBox prefHeight="42.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onaceuilButtonClick" prefHeight="38.0" prefWidth="84.0" stylesheets="@menu.css" text="Accueil" />
+                        <Button fx:id="BEP" mnemonicParsing="false" onAction="#onpatientButtonClick" prefHeight="37.0" prefWidth="111.0" text="Espace Patient" />
+                        <Button fx:id="BEPr" mnemonicParsing="false" onAction="#onpersonnelButtonClick" prefHeight="40.0" prefWidth="109.0" text="Espace Personnel" />
+                        <Button fx:id="BFDP" mnemonicParsing="false" onAction="#onfactureButtonClick" prefHeight="40.0" prefWidth="130.0" text="Factures Des Patients" />
+                        <Button fx:id="AProp" mnemonicParsing="false" onAction="#onproposButtonClick" prefHeight="38.0" prefWidth="70.0" text="À propos" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <HBox prefHeight="47.0" prefWidth="106.0" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+        <Button fx:id="Decon" layoutX="771.0" layoutY="7.0" mnemonicParsing="false" onAction="#ondeconButtonClick" prefHeight="42.0" prefWidth="169.0" stylesheets="@menu.css" text="Déconnexion" />
+
+        <VBox layoutX="3.0" layoutY="82.0" prefHeight="207.0" prefWidth="934.0">
+            <children>
+                <HBox prefHeight="62.0" prefWidth="454.0">
+                    <children>
+                        <Label prefHeight="62.0" prefWidth="827.0" text="                          RDsante" textFill="WHITE">
+                            <font>
+                                <Font name="SansSerif Regular" size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label prefHeight="76.0" prefWidth="761.0" text="                                     Système de gestion de clinique" textFill="#c3bcbc">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <HBox prefHeight="25.0" prefWidth="907.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#ajout_patient" prefHeight="25.0" prefWidth="311.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Ajouter personnel" />
+                        <Button mnemonicParsing="false" onAction="#information_patient" prefHeight="25.0" prefWidth="311.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Afficher informaton" />
+                        <Button mnemonicParsing="false" onAction="#suppmodif_patient" prefHeight="25.0" prefWidth="311.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Supp et Modif" />
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+        <AnchorPane fx:id="ajout" layoutX="1.0" layoutY="259.0" maxHeight="-Infinity" prefHeight="300.0" prefWidth="924.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="380.0" layoutX="308.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="287.0" />
+                <Label layoutX="309.0" layoutY="11.0" prefHeight="25.0" prefWidth="285.0" style="-fx-background-color: #c3bcbc;" text="                Formulaire d'ajouter personnel" textFill="#0a0000" />
+                <Button fx:id="validerform" layoutX="398.0" layoutY="352.0" mnemonicParsing="false" onAction="#ajoutpatient" onKeyPressed="#ajoutpatient" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #c3cbcb;" text="Valider">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="nomform" layoutX="326.0" layoutY="50.0" prefHeight="25.0" prefWidth="232.0" promptText="Entrez nom" />
+                <TextField fx:id="prenomform" layoutX="326.0" layoutY="85.0" prefHeight="25.0" prefWidth="232.0" promptText="Entrez prénom" />
+                <TextField fx:id="addresseform" layoutX="326.0" layoutY="180.0" prefHeight="25.0" prefWidth="232.0" promptText="Addresse" />
+                <TextField fx:id="numform" layoutX="365.0" layoutY="215.0" prefHeight="25.0" prefWidth="192.0" promptText="Entrez numéro" />
+                <Label layoutX="326.0" layoutY="120.0" prefHeight="17.0" prefWidth="232.0" text="Type :" />
+                <Label layoutX="326.0" layoutY="215.0" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #c3cbcb;" text=" +216" />
+                <TextField fx:id="mailform" layoutX="326.0" layoutY="250.0" prefHeight="25.0" prefWidth="232.0" promptText="Email addresse" />
+                <RadioButton fx:id="female" layoutX="439.0" layoutY="285.0" mnemonicParsing="false" onAction="#female" text="Female">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="gg" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="male" layoutX="510.0" layoutY="285.0" mnemonicParsing="false" onAction="#male" text="Male" toggleGroup="$gg" />
+                <Label layoutX="326.0" layoutY="285.0" prefHeight="17.0" prefWidth="109.0" text="Selectionnez genre :" />
+                <ComboBox fx:id="docteurform" editable="true" layoutX="326.0" layoutY="144.0" onAction="#setData" prefHeight="25.0" prefWidth="232.0" promptText="Selectionnez type" visibleRowCount="5" />
+                <Group layoutX="137.0" layoutY="129.0" />
+            <TextField fx:id="tempsdutravail" layoutX="318.0" layoutY="313.0" prefHeight="25.0" prefWidth="232.0" promptText="temps du travail" />
+            </children>
+            <opaqueInsets>
+            </opaqueInsets>
+        </AnchorPane>
+        <AnchorPane fx:id="recherche" layoutX="69.0" layoutY="305.0" prefHeight="160.0" prefWidth="787.0" visible="false">
+            <children>
+                <Text fill="#c3bcbc" layoutX="222.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher patient">
+                    <font>
+                        <Font name="Arial Black" size="28.0" />
+                    </font>
+                </Text>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ab1c6" height="3.0" layoutX="138.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" width="479.0" />
+                <TextField layoutX="90.0" layoutY="75.0" prefHeight="25.0" prefWidth="611.0" text="Entrez num d'inscription " />
+                <Button layoutX="286.0" layoutY="128.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="232.0" text="Rechercher " />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="recherche1" layoutX="27.0" layoutY="252.0" prefHeight="390.0" prefWidth="891.0" visible="false">
+            <children>
+                <Text fill="#c3bcbc" layoutX="3.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher personnel: " wrappingWidth="220.978515625">
+                    <font>
+                        <Font name="Bodoni MT" size="22.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="keyword" layoutX="224.0" layoutY="25.0" prefHeight="26.0" prefWidth="646.0" promptText="Entrez un champ" />
+                <TableView fx:id="tablepatient" blendMode="LIGHTEN" layoutX="15.0" layoutY="75.0" prefHeight="295.0" prefWidth="855.0">
+                    <columns>
+                        <TableColumn fx:id="idtab" prefWidth="52.0" text="Id" />
+                        <TableColumn fx:id="nomtab" prefWidth="85.0" text="Nom" />
+                        <TableColumn fx:id="prenomtab" prefWidth="88.0" text="Prénom" />
+                        <TableColumn fx:id="docteurtab" prefWidth="94.0" text="Type" />
+                        <TableColumn fx:id="addressetab" prefWidth="118.0" text="Adresse" />
+                        <TableColumn fx:id="numtab" prefWidth="92.0" text="Num" />
+                        <TableColumn fx:id="emailtab" prefWidth="114.0" text="Email" />
+                        <TableColumn fx:id="genretab" prefWidth="86.0" text="Genre" />
+                        <TableColumn fx:id="rendtab" prefWidth="124.0" text="temps travail" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="delete_update" layoutX="37.0" layoutY="262.0" prefHeight="390.0" prefWidth="891.0" visible="false">
+            <children>
+                <Text fill="#c3bcbc" layoutX="5.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher personnel: " wrappingWidth="220.97851562499994">
+                    <font>
+                        <Font name="Bodoni MT" size="22.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="keyword1" layoutX="210.0" layoutY="25.0" prefHeight="25.0" prefWidth="523.0" promptText="Entrez un champ" />
+                <TableView fx:id="tablepatient1" blendMode="LIGHTEN" layoutX="15.0" layoutY="75.0" onMouseClicked="#evenenment1" prefHeight="288.0" prefWidth="855.0">
+                    <columns>
+                        <TableColumn fx:id="idtab1" prefWidth="52.0" text="Id" />
+                        <TableColumn fx:id="nomtab1" prefWidth="85.0" text="Nom" />
+                        <TableColumn fx:id="prenomtab1" prefWidth="88.0" text="Prénom" />
+                        <TableColumn fx:id="docteurtab1" prefWidth="94.0" text="type" />
+                        <TableColumn fx:id="addressetab1" prefWidth="118.0" text="Adresse" />
+                        <TableColumn fx:id="numtab1" prefWidth="92.0" text="Num" />
+                        <TableColumn fx:id="emailtab1" prefWidth="114.0" text="Email" />
+                        <TableColumn fx:id="genretab1" prefWidth="86.0" text="Genre" />
+                        <TableColumn fx:id="rendtab1" prefWidth="124.0" text="temps travail" />
+                    </columns>
+                </TableView>
+                <Button fx:id="delete" layoutX="747.0" layoutY="17.0" mnemonicParsing="false" onAction="#suprimepatient" prefHeight="32.0" prefWidth="40.0">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@supp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="update" layoutX="808.0" layoutY="18.0" mnemonicParsing="false" onAction="#updatpatient" prefHeight="32.0" prefWidth="40.0">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@update.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="update1" layoutX="11.0" layoutY="269.0" maxHeight="-Infinity" prefHeight="300.0" prefWidth="924.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="362.0" layoutX="308.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="287.0" />
+                <Label layoutX="308.0" layoutY="11.0" prefHeight="25.0" prefWidth="285.0" style="-fx-background-color: #c3bcbc;" text="               Formulaire de modifier personnel" textFill="#0a0000" />
+                <Button fx:id="validerform1" layoutX="370.0" layoutY="329.0" mnemonicParsing="false" onAction="#updatebtn" onKeyPressed="#updatebtn" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #c3cbcb;" text="Valider">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="nom" layoutX="326.0" layoutY="75.0" prefHeight="25.0" prefWidth="232.0" promptText="Entrez nom" />
+                <TextField fx:id="prenom" layoutX="326.0" layoutY="113.0" prefHeight="25.0" prefWidth="232.0" promptText="Entrez prénom" />
+                <TextField fx:id="addresse" layoutX="326.0" layoutY="213.0" prefHeight="25.0" prefWidth="232.0" promptText="Addresse" />
+                <TextField fx:id="num" layoutX="365.0" layoutY="247.0" prefHeight="25.0" prefWidth="192.0" promptText="Entrez numéro" />
+                <Label layoutX="326.0" layoutY="147.0" prefHeight="17.0" prefWidth="232.0" text="Type :" />
+                <Label layoutX="326.0" layoutY="246.0" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #c3cbcb;" text=" +216" />
+                <TextField fx:id="temps" layoutX="326.0" layoutY="287.0" prefHeight="25.0" prefWidth="232.0" promptText="Email addresse" text="temps du travail" />
+                <ComboBox fx:id="docteur" editable="true" layoutX="326.0" layoutY="176.0" onAction="#setData" prefHeight="25.0" prefWidth="232.0" promptText="selectionnez type" visibleRowCount="5" />
+                <Group layoutX="137.0" layoutY="129.0" />
+                <Button fx:id="validerform11" layoutX="463.0" layoutY="329.0" mnemonicParsing="false" onAction="#refrecherbtn" onKeyPressed="#refrecherbtn" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #c3cbcb;" text="rafraîchir">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="idpatient" layoutX="326.0" layoutY="43.0" prefHeight="25.0" prefWidth="232.0" promptText="idpatient" />
+            </children>
+            <opaqueInsets>
+            </opaqueInsets>
+        </AnchorPane>
+
+
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="646.0" maxWidth="911.0" prefHeight="523.0" prefWidth="858.0" styleClass="anchor" stylesheets="@scratch.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjava.proposController">
+
+    <children>
+        <BorderPane layoutY="7.0" prefHeight="42.0" prefWidth="523.0">
+            <top>
+                <HBox prefHeight="42.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onaceuilButtonClick" prefHeight="38.0" prefWidth="66.0" stylesheets="@menu.css" text="Accueil" />
+                        <Button fx:id="BEP" mnemonicParsing="false" onAction="#onpatientButtonClick" prefHeight="38.0" prefWidth="106.0" stylesheets="@menu.css" text="Espace Patient" />
+                        <Button fx:id="BEPr" mnemonicParsing="false" onAction="#onpersonnelButtonClick" prefHeight="40.0" prefWidth="109.0" stylesheets="@menu.css" text="Espace Personnel" />
+                        <Button fx:id="BFDP" mnemonicParsing="false" onAction="#onfactureButtonClick" prefHeight="40.0" prefWidth="135.0" stylesheets="@menu.css" text="Factures Des Patients" />
+                        <Button fx:id="AProp" mnemonicParsing="false" onAction="#onproposButtonClick" prefHeight="38.0" prefWidth="110.0" stylesheets="@menu.css" text="À propos" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <HBox prefHeight="47.0" prefWidth="106.0" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+        <Button fx:id="Decon" layoutX="755.0" layoutY="2.0" mnemonicParsing="false" onAction="#ondeconButtonClick" prefHeight="42.0" prefWidth="169.0" stylesheets="@menu.css" text="Déconnexion" />
+      <AnchorPane layoutX="25.0" layoutY="39.0" prefHeight="528.0" prefWidth="902.0">
+         <children>
+            <Label layoutX="46.0" layoutY="28.0" lineSpacing="5.0" prefHeight="43.0" prefWidth="297.0" text="A propos " textFill="WHITE">
+               <font>
+                  <Font name="Zilla Slab SemiBold" size="35.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="3.0" fill="WHITE" height="116.0" layoutX="33.0" layoutY="463.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" width="805.0" />
+            <Label layoutX="92.0" layoutY="480.0" prefHeight="24.0" prefWidth="92.0" text="Résumé :" textFill="#792626">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#333131" height="3.0" layoutX="629.0" layoutY="565.0" stroke="#a99818" strokeType="INSIDE" strokeWidth="2.0" width="156.0" />
+            <Rectangle arcHeight="5.0" arcWidth="3.0" fill="#fffcfc52" height="437.0" layoutX="32.0" layoutY="26.0" opacity="0.42" stroke="BLACK" strokeType="INSIDE" width="340.0" />
+            <Label layoutX="50.0" layoutY="180.0" prefHeight="43.0" prefWidth="366.0" text="Accéder aux compte:" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="210.0" prefHeight="43.0" prefWidth="366.0" text="-Nom d'utilisateur : admin" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="89.0" prefHeight="43.0" prefWidth="366.0" text="Nom du Projet : RDsante" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="119.0" lineSpacing="2.0" prefHeight="43.0" prefWidth="366.0" text="Langue utilisée : java" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="149.0" prefHeight="43.0" prefWidth="366.0" text="Base de données utilisée : My SQL" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="239.0" prefHeight="43.0" prefWidth="366.0" text="-Mot de passe : 123" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="265.0" prefHeight="43.0" prefWidth="366.0" text=" Admin peut :" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="297.0" prefHeight="43.0" prefWidth="366.0" text="-Gérer la demande" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="325.0" prefHeight="43.0" prefWidth="366.0" text="-Gérer les factures" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="353.0" prefHeight="43.0" prefWidth="366.0" text="-.Gérer les médecins" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="381.0" prefHeight="43.0" prefWidth="366.0" text="-.Gérer les rendez-vous" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="407.0" prefHeight="43.0" prefWidth="366.0" text="-.Connexion et déconnexion" textFill="WHITE">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="129.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lobjectif de projet était l'élaboration d'un systéme d'information qui aide à gérer et modéliser les dossiers des patients dans un clinique et encourager les gens à utiliser la technologie dans leur travail pour le facilite et le rendre moins compliqués et plus sécurisé" wrappingWidth="630.181640625" />
+            <Rectangle arcHeight="5.0" arcWidth="3.0" height="437.0" layoutX="378.0" layoutY="26.0" opacity="0.79" stroke="BLACK" strokeType="INSIDE" width="460.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8500000238418579" green="0.8051552176475525" blue="0.3400000035762787" opacity="0.5199999809265137" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <Text fill="WHITE" layoutX="432.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="366.1366882324219" />
+            <Label layoutX="537.0" layoutY="244.0" prefHeight="15.0" prefWidth="118.0" text="Jlizi Safa">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="531.0" layoutY="403.0" text="Touihri Fedia">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#333131" height="3.0" layoutX="390.0" layoutY="99.0" rotate="90.0" stroke="#a99818" strokeType="INSIDE" strokeWidth="2.0" width="60.0" />
+            <Text fill="#a99818" layoutX="450.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'équipe: ">
+               <font>
+                  <Font name="Bodoni MT Black Italic" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="449.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nous somme des etudiants en deuxiéme année au sein de  l'Ecole Nationa de Carthage (enicarthage)." wrappingWidth="354.1573181152344" />
+            <ImageView fitHeight="121.0" fitWidth="106.0" layoutX="423.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@safa.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="153.0" fitWidth="132.0" layoutX="425.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@fedia.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#333131" height="3.0" layoutX="512.0" layoutY="443.0" stroke="#a99818" strokeType="INSIDE" strokeWidth="2.0" width="156.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" layoutY="106.0" prefHeight="518.0" prefWidth="920.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="360.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="212.0" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

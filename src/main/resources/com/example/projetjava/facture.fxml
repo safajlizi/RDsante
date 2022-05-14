@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="646.0" maxWidth="946.0" prefHeight="616.0" prefWidth="902.0" styleClass="anchor" stylesheets="@scratch.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjava.factureController">
+
+    <children>
+        <BorderPane layoutY="7.0" prefHeight="42.0" prefWidth="523.0">
+            <top>
+                <HBox prefHeight="42.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onaceuilButtonClick" prefHeight="38.0" prefWidth="66.0" stylesheets="@menu.css" text="Accueil" />
+                        <Button fx:id="BEP" mnemonicParsing="false" onAction="#onpatientButtonClick" prefHeight="38.0" prefWidth="106.0" stylesheets="@menu.css" text="Espace Patient" />
+                        <Button fx:id="BEPr" mnemonicParsing="false" onAction="#onpersonnelButtonClick" prefHeight="40.0" prefWidth="109.0" stylesheets="@menu.css" text="Espace Personnel" />
+                        <Button fx:id="BFDP" mnemonicParsing="false" onAction="#onfactureButtonClick" prefHeight="40.0" prefWidth="135.0" stylesheets="@menu.css" text="Factures Des Patients" />
+                        <Button fx:id="AProp" mnemonicParsing="false" onAction="#onproposButtonClick" prefHeight="38.0" prefWidth="110.0" stylesheets="@menu.css" text="À propos" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <HBox prefHeight="47.0" prefWidth="106.0" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+        <Button fx:id="Decon" layoutX="755.0" layoutY="2.0" mnemonicParsing="false" onAction="#ondeconButtonClick" prefHeight="42.0" prefWidth="169.0" stylesheets="@menu.css" text="Déconnexion" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6fa94b" height="6.0" layoutX="273.0" layoutY="181.0" stroke="#4d6e47" strokeType="INSIDE" width="404.0" />
+          <Label layoutX="81.0" layoutY="81.0" prefHeight="62.0" prefWidth="533.0" text="                     RDsante" textFill="WHITE">
+              <font>
+                  <Font name="SansSerif Regular" size="50.0" />
+              </font>
+          </Label>
+        <Label layoutY="120.0" prefHeight="76.0" prefWidth="761.0" text="                                     Système de gestion de clinique" textFill="#c3bcbc">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+      <AnchorPane fx:id="ajout" layoutX="17.0" layoutY="-45.0" maxHeight="-Infinity" prefHeight="610.0" prefWidth="876.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="374.0" layoutX="308.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" width="287.0" />
+            <Label layoutX="309.0" layoutY="244.0" prefHeight="25.0" prefWidth="285.0" style="-fx-background-color: #c3bcbc;" text="                     Formulaire de Modifier facture" textFill="#0a0000" />
+            <Button fx:id="validerform" layoutX="346.0" layoutY="571.0" mnemonicParsing="false" onAction="#updateRecord" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #c3cbcb;" text="Valider">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="montant" layoutX="335.0" layoutY="483.0" prefHeight="25.0" prefWidth="232.0" promptText="entrez le montant" />
+            <TextField fx:id="montantpay" layoutX="335.0" layoutY="519.0" prefHeight="25.0" prefWidth="232.0" promptText="entrez le montant payé" />
+            <Group layoutX="137.0" layoutY="129.0" />
+            <Button fx:id="refresher" layoutX="462.0" layoutY="572.0" mnemonicParsing="false" onAction="#Refrech" prefHeight="26.0" prefWidth="87.0" text="refresher">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nomform" layoutX="336.0" layoutY="306.0" prefHeight="25.0" prefWidth="232.0" promptText="Entrez nom" />
+            <TextField fx:id="prenomform" layoutX="336.0" layoutY="341.0" prefHeight="25.0" prefWidth="232.0" promptText="Entrez prénom" />
+            <TextField fx:id="addresseform" layoutX="336.0" layoutY="404.0" prefHeight="25.0" prefWidth="232.0" promptText="Addresse" />
+            <TextField fx:id="numform" layoutX="375.0" layoutY="439.0" prefHeight="25.0" prefWidth="192.0" promptText="Entrez numéro" />
+            <Label layoutX="336.0" layoutY="439.0" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #c3cbcb;" text=" +216" />
+            <ComboBox fx:id="docteurform" editable="true" layoutX="336.0" layoutY="368.0" prefHeight="25.0" prefWidth="232.0" promptText="Selectionnez docteur" visibleRowCount="5" />
+            <TextField fx:id="idfact" layoutX="336.0" layoutY="272.0" prefHeight="25.0" prefWidth="232.0" promptText="ID" />
+         </children>
+         <opaqueInsets>
+            <Insets top="-3.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane fx:id="tableviewbt" layoutX="41.0" layoutY="77.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="414.0" prefWidth="802.0">
+         <children>
+      
+                              <TableView fx:id="tv" blendMode="LIGHTEN" layoutX="59.0" layoutY="130.0" onMouseClicked="#handleMouseAction" prefHeight="330.0" prefWidth="735.0">
+              <columns>
+                  <TableColumn fx:id="id" prefWidth="46.399993896484375" text="ID" />
+                <TableColumn fx:id="nompatient" prefWidth="75.0" text="Nom " />
+                  <TableColumn fx:id="prenompatient" prefWidth="75.0" text="Prenom" />
+                  <TableColumn fx:id="num" prefWidth="75.0" text="Num" />
+                  <TableColumn fx:id="adresse" prefWidth="75.0" text="adresse" />
+                  <TableColumn fx:id="date" prefWidth="88.00003051757812" text="date naissance" />
+                  <TableColumn fx:id="doctorename" prefWidth="95.199951171875" text="doctore name" />
+                  <TableColumn fx:id="montanttotale" prefWidth="100.0" text="montant totale" />
+                  <TableColumn fx:id="montantpaye" minWidth="0.0" prefWidth="103.199951171875" text="montant payé" />
+              </columns>
+            </TableView>
+            <Button layoutX="257.0" layoutY="473.0" mnemonicParsing="false" onAction="#suprimefacture" prefHeight="42.0" prefWidth="182.0" text="Supprimer">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="446.0" layoutY="474.0" mnemonicParsing="false" onAction="#updat" prefHeight="42.0" prefWidth="182.0" text="Modifier">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

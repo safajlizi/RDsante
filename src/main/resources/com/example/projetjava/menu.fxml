@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="646.0" maxWidth="911.0" prefHeight="646.0" prefWidth="911.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjava.menuController">
+    <stylesheets>
+    </stylesheets>
+    <children>
+        <BorderPane fx:id="borderpa" layoutY="7.0" prefHeight="42.0" prefWidth="523.0">
+            <top>
+                <HBox prefHeight="42.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="BEP" mnemonicParsing="false" onAction="#onpatientButtonClick" onKeyPressed="#onpatientButtonClick" prefHeight="37.0" prefWidth="111.0" text="Espace Patient" />
+                        <Button fx:id="BEPr" mnemonicParsing="false" onAction="#onpersonnelButtonClick" onKeyPressed="#onpersonnelButtonClick" prefHeight="40.0" prefWidth="109.0" text="Espace Personnel" />
+                        <Button fx:id="BFDP" mnemonicParsing="false" onAction="#onfactureButtonClick" onKeyPressed="#onfactureButtonClick" prefHeight="40.0" prefWidth="130.0" text="Factures Des Patients" />
+                        <Button fx:id="AProp" mnemonicParsing="false" onAction="#onproposButtonClick" onKeyPressed="#onproposButtonClick" prefHeight="38.0" prefWidth="110.0" text="À propos" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <HBox prefHeight="47.0" prefWidth="106.0" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+        <Button fx:id="Decon" layoutX="755.0" layoutY="2.0" mnemonicParsing="false" onAction="#ondeconButtonClick" prefHeight="42.0" prefWidth="169.0" text="Déconnexion" />
+        <VBox fx:id="vbox" layoutX="284.0" layoutY="127.0" prefHeight="536.0" prefWidth="453.0">
+            <children>
+                <HBox prefHeight="117.0" prefWidth="454.0">
+                    <children>
+                        <Label fx:id="espace1" text="               " />
+                        <ImageView fitHeight="135.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@logo1.png" />
+                            </image>
+                  </ImageView>
+                        <Label fx:id="rdsant" prefHeight="118.0" prefWidth="233.0" text="RDsante" textFill="WHITE">
+                            <font>
+                                <Font name="SansSerif Regular" size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label fx:id="sysdegest" prefHeight="0.0" prefWidth="454.0" text="Système de gestion de clinique" textFill="WHITE">
+                    <font>
+                        <Font size="28.0" />
+                    </font></Label>
+                <HBox fx:id="hbox1" prefHeight="0.0" prefWidth="454.0">
+                    <children>
+                        <Label text="              " />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1.0" stroke="WHITE" strokeType="INSIDE" width="300.0" />
+                    </children>
+                </HBox>
+                <HBox fx:id="hbox2" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="                  " />
+                        <Button fx:id="bpati" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#onpatientButtonClick" onKeyPressed="#onpatientButtonClick" style="-fx-content-display: TOP;" text="Patients">
+                            <graphic>
+                                <ImageView fx:id="BP" fitHeight="146.0" fitWidth="119.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logo2.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="bper" mnemonicParsing="false" onAction="#onpersonnelButtonClick" onKeyPressed="#onpersonnelButtonClick" style="-fx-content-display: top;" text="Personnels">
+                            <graphic>
+                                <ImageView fx:id="BPr" fitHeight="154.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+
+                                        <Image url="@logo3.png" />
+
+
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox fx:id="hbox3" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="                   " />
+                        <Button fx:id="bf" mnemonicParsing="false" onAction="#onfactureButtonClick" onKeyPressed="#onfactureButtonClick" style="-fx-content-display: top;" text="Factures">
+                            <graphic>
+                                <ImageView fx:id="BF" fitHeight="119.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logo4.png" />
+                                    </image></ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="bp" mnemonicParsing="false" onAction="#onproposButtonClick" onKeyPressed="#onproposButtonClick" style="-fx-content-display: top;" text="A propos ">
+                            <graphic>
+                                <ImageView fx:id="Bpros" fitHeight="163.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logo5.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
