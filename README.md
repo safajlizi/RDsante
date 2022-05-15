@@ -1,6 +1,6 @@
 # RDsante
 
-Our project was carried out within the National School of Engineers of Carthage for 5 weeks. We chose our mini project which consists of developing a patient management application in a clinic
+Our project was carried out within the National School of Engineers of Carthage for 5 weeks. We chose our mini project which consists of developing a patient management application in a clinic.                                          
 The goal of my project is to design and implement a simple application for computerizing medical files and managing the affairs of patients and staff in the clinic.
 
 The main objectives of the hospital are:
